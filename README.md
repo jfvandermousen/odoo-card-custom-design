@@ -30,7 +30,7 @@ Code a custom Bootstrap Card component
 - [odoo-bootstrap-card-component](https://github.com/jfvandermousen/odoo-bootstrap-card-component)
 - [Github Page for replica](https://jfvandermousen.github.io/odoo-bootstrap-card-component/)
 
-2. From the first repository i create a template and create a second repository to display the custom design version:
+2. From the first repository i make a template and create a the second repository to display the custom design version:
 - [odoo-card-custom-design](https://github.com/jfvandermousen/odoo-card-custom-design)
 - [Github Page for custom design](https://jfvandermousen.github.io/odoo-card-custom-design)
 
