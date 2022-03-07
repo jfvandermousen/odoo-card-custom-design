@@ -1,0 +1,92 @@
+// Customizations
+
+$gray-custom: #adb5bd ;
+$gray-300: #dee2e6 !default;
+$odoo-gray: #adb5bd;
+
+$odoo-primary: #714B67;
+$nav-link-color: $odoo-primary;
+$nav-link-hover-color: black;
+$border-color: $gray-300;
+
+// Fix  nav link padding
+
+$nav-link-padding-x: 1.25rem;
+$nav-link-disabled-color: rgb(200, 200, 200);
+
+.nav-tabs .nav-link {
+  width: 108px;
+};
+
+$container-max-widths: (
+  sm: 600px,
+);
+
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 600px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+$spacer: 1rem !default;
+
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  o: $spacer * 1.25,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+) !default;
+
+
+
+// SVG LOADER STYLES
+
+/* 
+.spinner {
+  animation: rotate 2s linear infinite;
+  z-index: 2;
+  position: relative;
+  top: 50%;
+  left: 47%;
+  margin: -25px 0 0 -25px;
+  width: 50px;
+  height: 50px;
+  
+  & .path {
+    stroke: black;
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+
+*/
+
+@import "../node_modules/bootstrap/scss/bootstrap";

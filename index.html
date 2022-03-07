@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Odoo - Custom card component</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/main.min.css" rel="stylesheet">
+  </head>
+  <body class="p-5">
+
+    <!-- Custom Card component-->
+
+    <div class="card container-sm px-0 pb-0">
+      <div class="card-header bg-dark ps-o ">
+        <ul class="nav nav-tabs card-header-tabs" role="tablist">
+          <li class="nav-item bg-white me-2">
+            <button class="nav-link active rounded-0" id="nav-tab-1" data-bs-toggle="tab" data-bs-target="#tab-1" type="button" role="tab" aria-controls="tab-1" aria-selected="true">Tab 1</button>
+          </li>
+          <li class="nav-item bg-light me-2">
+            <button class="nav-link rounded-0" id="nav-tab-2" data-bs-toggle="tab" data-bs-target="#tab-2" type="button" role="tab" aria-controls="tab-2" aria-selected="false">Tab 2</button>
+
+          </li>
+          <li class="nav-item bg-light me-2">
+            <button class="nav-link rounded-0" id="nav-tab-3" data-bs-toggle="tab" data-bs-target="#tab-3" type="button" role="tab" aria-controls="tab-3" aria-selected="false">Tab 3</button>
+
+          </li>
+          <li class="nav-item bg-dark">
+            <a class="nav-link disable bg-secondary text-white rounded-0" href="#" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
+          <div class="border-bottom-0">
+            <div class="card-body px-0 pb-0 rounded-0">
+              <div class="ps-o">
+                <h5 class="card-title text-start mt-3">Card title</h5>
+                <h6 class="card-subtitle mb-4 text-muted text-start">Card subtitle</h6>
+              </div>
+                <div class="container">
+                <div class="row px-0 border-top border-1 ">
+                  <ul class="nav flex-column col-md-6 align-items-start px-0 " id="myTab" role="tablist">
+                    <li class="nav-item w-100 text-start ps-o" role="presentation">
+                      <p class="nav-link active ps-0 py-4 mb-0" id="item-1-tab" data-bs-toggle="tab" data-bs-target="#img-1" type="button" role="tab" aria-controls="img-1-tab" aria-selected="true">An item</p>
+                    </li>
+                    <li class="nav-item border-top border-1 w-100 text-start ps-o" role="presentation">
+                      <p class="nav-link ps-0 py-4 mb-0" id="item-2-tab" data-bs-toggle="tab" data-bs-target="#img-2" type="button" role="tab" aria-controls="img-2-tab" aria-selected="false">A second item</p>
+                    </li>
+                    <li class="nav-item border-top border-1 w-100 text-start ps-o" role="presentation">
+                      <p class="nav-link ps-0 py-4 mb-0" id="item-3-tab" data-bs-toggle="tab" data-bs-target="#img-3" type="button" role="tab" aria-controls="img-3-tab" aria-selected="false">A third item</p>
+                    </li>
+                  </ul>
+                  <div class="tab-content col-md-6 px-0" id="myTabContent">
+                    <div class="tab-pane fade show active" id="img-1" role="tabpanel" aria-labelledby="img-1-tab">
+                      <img src="./assets/deplyment-erp-odoo.jpg" class="img-fluid" alt="deployment-erp-odoo">
+                    </div>
+                    <div class="tab-pane fade" id="img-2" role="tabpanel" aria-labelledby="img-2-tab">
+                      <img src="./assets/getapp-odoo.jpg" class="img-fluid" alt="getapp-odoo">
+                    </div>
+                    <div class="tab-pane fade" id="img-3" role="tabpanel" aria-labelledby="img-3-tab">
+                      <img src="./assets/odoo-logo-square.jpg" class="img-fluid" alt="odoo_logo">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
+          <div class="card" >
+            <div class="card-body py-5 ">
+              <h4 class="text-center mb-4">Loading...</h4>
+              <!-- 
+                The loader  is entirely built with HTML / CSS.
+              -->
+              <div class="d-flex justify-content-center">
+                <div class="spinner-border text-black me-3"  style="width:4rem; height: 4rem;" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
+              <!-- SVG LOADER  with custom scss in main.scss file
+              <div class="">
+                <svg class="spinner my-4" viewBox="0 0 50 50" style="width:4rem; height: 4rem;">
+                  <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+                </svg>
+              </div>
+            --> 
+
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3">
+            <div class="card-body p-0">
+              <div class="row row-cols-12 m-0">
+                <div class="col-md-4 p-0">
+                  <img src="./assets/odoo-logo-square.jpg" class="img-fluid" alt="odoo_logo">
+                </div>
+                <div class="card-body col-md-8 p-sm-4 pb-md-0">
+                  <h5 class="card-title ">Card title</h5>
+                    <p class="card-text lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="card-footer ps-o text-white text-start bg-dark border-0">
+        2 days ago
+      </div>
+    </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
