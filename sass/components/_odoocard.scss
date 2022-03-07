@@ -1,0 +1,90 @@
+@mixin card-header($color) {
+  .card-header {
+    padding-left: $odoo-padding;
+    padding-right: $odoo-padding;
+    padding-top: 1.5rem;
+    background-color: $color;
+
+    .nav-tabs .nav-link {
+      width: 108px;
+    }
+    .nav-item {
+      background-color: $info;
+      border-radius: $border-radius;
+      &:hover {
+        color: $color;
+        background-color: $white;
+      }
+      .nav-link {
+        color: $white;
+        &:hover {
+          color: $color;
+          background-color: $white;
+        }
+      }
+
+    }
+
+    .nav-link.active {
+      color:$active;
+    }
+
+    .nav-link.disable {
+      color: $gray-700;
+      background-color: #e7e7e7 ;
+    }
+
+
+  }
+
+}
+
+
+@each $color,$value in $theme-colors {
+  .card-#{$color} {
+    padding: $base-padding;
+    margin: $base-marging;
+    border: $base-border;
+  
+    @include card-header($value);
+
+  
+    .card-body {
+      padding: $base-padding ;
+  
+      .card-title {
+        color: $secondary;
+        font-weight: 500;
+      }
+      .card-subtitle {
+        font-size: $font-size-sm;
+      }
+
+      .nav-link {
+        color:$value;
+        &:hover {
+          color: $secondary;
+        }
+      }
+
+      .nav-link.active {
+        color:$primary;
+      }
+    }
+  
+  
+    .card-footer {
+      color: white;
+      background-color: $value;
+      border: none;
+      padding-left: $odoo-padding;
+    }
+  
+  
+    
+  }
+  
+}
+
+
+

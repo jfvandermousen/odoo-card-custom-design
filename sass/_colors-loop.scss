@@ -1,0 +1,43 @@
+@each $color, $value in $theme-colors {
+    .text-#{$color} {
+        color: $value;
+    }
+    .text-hover-#{$color} {
+       &:hover {
+        color: $value;
+       } 
+    }
+
+    .bg-#{$color} {
+        background-color: $value;
+    }
+
+    @if($value != black and $value != white) {
+            
+        // light variations
+
+    @for $i from 1 through 9 {
+        .text-#{$color}-light-#{$i} {
+            color: mix(white,$value, $i * 10);
+        }
+
+        .bg-#{$color}-light-#{$i} {
+            background-color: mix(white,$value, $i * 10)
+        }
+    }
+
+    // Dark variations
+    
+    @for $i from 1 through 9 {
+        .text-#{$color}-dark-#{$i} {
+            color: mix(black,$value, $i * 10)
+        }
+
+        .bg-#{$color}-dark-#{$i} {
+            background-color: mix(black,$value, $i * 10)
+        }
+    }
+    }
+
+
+}

@@ -1,0 +1,36 @@
+$primary: #714B67 ;
+$secondary: #025A5E;
+$success : #20c997;
+$info: #f2835b;
+$warning:#d32752;
+$active: #f2835b;
+$light: #e9ecef;
+$dark: #503047;
+
+// Shade create with razorltd.github.io
+$odoo-shade : darken(saturate(adjust-hue(#714b67, -1), 5.18), 12.16);
+
+
+
+
+
+$custom-theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "active": $active,
+    "light" : $light,
+    "dark" : $dark,
+);
+
+
+
+
+
+
+$nav-link-padding-x: 1.25rem;
+$nav-link-disabled-color: rgb(200, 200, 200);
+
+

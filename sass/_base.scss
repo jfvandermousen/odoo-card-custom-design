@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,400&display=swap');
+
+// resets styles
+
+$font-family-base: 'Poppins', sans-serif;
+
+$base-padding: 0 ;
+$base-marging: 0 ;
+$base-border : 1px solid rgba(0,0,0,0.125);
+$border-radius:               .25rem ;
+
+$odoo-padding: 1.25rem ;
+$odoo-marging: 1.25rem ;
+
+
+$font-size-base:1rem;
+$font-size-sm: $font-size-base * .875;
+$font-size-lg: $font-size-base * 1.5;
+
+
+
+$container-max-widths: (
+    sm: 600px,
+    ) !default;
+    $spacer: 1rem !default;
+    $spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  o: $spacer * 1.25,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+) !default;
+
+$container-padding-x : $base-padding;
