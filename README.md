@@ -18,11 +18,23 @@ Code a custom Bootstrap Card component
 
 ## Tech I used
 
-* Visual Studio Code
-* Bootstrap v5.1.3
+* [Visual Studio Code]
+* [Bootstrap v5.1.3]
 * [node.js]
-* Npm
-* Sass
+* [Npm]
+* [Sass]
+
+## GITHUB REPO
+
+1. First public repository to display the replica version:
+- [odoo-bootstrap-card-component](https://github.com/jfvandermousen/odoo-bootstrap-card-component)
+- [Github Page for replica](https://jfvandermousen.github.io/odoo-bootstrap-card-component/)
+
+2. From the first repository i make a template and create a second repository to display the custom design version:
+- [odoo-card-custom-design](https://github.com/jfvandermousen/odoo-card-custom-design)
+- [Github Page for custom design](https://jfvandermousen.github.io/odoo-card-custom-design)
+
+
 
 ## Installation
 
@@ -49,22 +61,26 @@ npm install bootstrap
 ## Works methodology
 
 
-#### Code  each objectif on separates branches :
+### Code objectifs on separates branches :
 
-1. ##### main branch -> Objectif A
+1. #### main branch -> Objectif A
 
 - Replicate custom card component using only utility classes, js components and custom variables
 - Build loader only with html / css 
-- Build svg loader on separate branch
+- Build svg loader in comments 
 
-2. ##### custom-design branch -> Objectif B
+2. #### Custom-design branch -> Objectif B and Objectif C
 
-- Custom Design of card component
+    ##### Custom Design of card component
 
-3. ##### mixins branch -> Objectif C
+- Separate in differents files under sass folder -> more maintenable / readable
+- Create custom base styles _base.scss
+- Create custom theme colors in _variables.scss
+- Create each loop in colors-loop. to have light and dark variations
+- Create odoocard component with mixins for card-header, card-body, card-footer and each    loop to display the diffrents variations
+- Each contextual classes should be applied on the component’s main <div> and trigger the style for all inner elements.
 
-- Create mixin for contextual classes
-- Separate in differents files - more maintenable - readable
+
 
 
 
@@ -78,9 +94,7 @@ npm install bootstrap
 [//]: #
 
 [node.js]: <http://nodejs.org>
-
-[Visual Studio Code]:
-[Bootstrap v5.1.3]:
-[node.js]:
-[Npm]:
-[Sass]:
+[Visual Studio Code]: <https://code.visualstudio.com>
+[Bootstrap v5.1.3]: <https://getbootstrap.com>
+[Npm]: <https://www.npmjs.com>
+[Sass]: <https://sass-lang.com>
