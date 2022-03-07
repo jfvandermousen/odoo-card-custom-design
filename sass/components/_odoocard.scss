@@ -1,0 +1,161 @@
+// custom  mixins
+
+
+@mixin card-header($color) {
+  .card-header {
+    padding-left: $odoo-padding;
+    padding-right: $odoo-padding;
+    padding-top: 1.5rem;
+    background-color: $color;
+
+    .nav-tabs .nav-link {
+      width: 108px;
+    }
+
+    .nav-item {
+      background-color: $info;
+      border-radius: $border-radius;
+      .nav-link {
+        color: $white;
+        &:hover {
+          color: $color;
+          background-color: $white;
+        }
+      }
+    }
+    // exception with if statement for info color
+
+    @if($color == $info) {
+      .nav-item {
+        background-color: $secondary;
+      }
+      .nav-link.active {
+        color:$hover;
+      }
+      .nav-link.disable {
+        color: $gray-700;
+        background-color: #e7e7e7 ;
+        &:hover {
+          color: $gray-700;
+          background-color: #e7e7e7;
+        }
+      }
+    }
+    // exception with if statement for light color
+    @if($color == $light) {
+      .nav-item {
+        background-color:rgb(199, 199, 199);
+        color: $primary;
+        .nav-link {
+          color: $white;
+          &:hover {
+            color: $primary;
+            background-color: $white;
+          }
+        }
+      }
+      .nav-link.active {
+        color:$hover;
+      }
+      .nav-link.disable {
+        color: $gray-700;
+        background-color: #e7e7e7 ;
+        &:hover {
+          color: $gray-700;
+          background-color: #e7e7e7;
+        }
+      }
+    }
+    .nav-link.active {
+      color:$hover;
+    }
+    .nav-link.disable {
+      color: $gray-700;
+      background-color: #e7e7e7 ;
+      &:hover {
+        color: $gray-700;
+        background-color: #e7e7e7;
+      }
+    }
+  }
+}
+
+@mixin card-body($color) { 
+  .card-body {
+    padding: $base-padding ;
+
+    .card-title {
+      color: $primary;
+      font-weight: 500;
+    }
+    .card-subtitle {
+      font-size: $font-size-sm;
+    }
+    .nav-link {
+      color:$color;
+      &:hover {
+        color: $hover;
+      }
+    }
+
+    .nav-link.active {
+      color:$hover;
+    }
+  }
+  // exception with if statement for light color
+  @if($color == $light) {
+    .card-body {
+      padding: $base-padding ;
+  
+      .card-title {
+        color: $primary;
+        font-weight: 500;
+      }
+      .card-subtitle {
+        font-size: $font-size-sm;
+      }
+      .nav-link {
+        color:$primary;
+        &:hover {
+          color: $hover;
+        }
+      }
+  
+      .nav-link.active {
+        color:$hover;
+      }
+    }
+  }
+  }
+
+@mixin card-footer($color) { 
+
+  .card-footer {
+    color: white;
+    background-color: $color;
+    border: none;
+    padding-left: $odoo-padding;
+  }
+// exception with if statement for light color
+  @if($color == $light) {
+    .card-footer {
+      color: $primary;
+      background-color: $color;
+    }
+  }
+  }
+
+// Each loop for contextual classes (primary, secondary, success, danger, warning, info, light, dark)
+
+@each $color,$value in $theme-colors {
+  .card-#{$color} {
+    padding: $base-padding;
+    margin: $base-marging;
+    border-radius: $border-radius;
+    border: $base-border;
+    // includes mixins
+    @include card-header($value);
+    @include card-body($value);
+    @include card-footer($value);
+  }
+}
